@@ -5,11 +5,12 @@ import javax.inject.Inject
 
 class HomePresenter @Inject constructor(private val homeModel: HomeModel) {
 
-    val compositeDisposable = CompositeDisposable()
+    private val compositeDisposable = CompositeDisposable()
 
     fun bindView(homeview: HomeView) {
         compositeDisposable.add(homeModel.getCurrentWeather("London")
-                .subscribe({ homeview.onUpdate() }, { homeview.onError() }))
+                .subscribe({ homeview.onUpdate(it.weather[0].main, it.main.temp.toString()) },
+                        { homeview.onError() }))
     }
 
     fun unbindView() {
