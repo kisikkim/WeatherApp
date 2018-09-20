@@ -6,8 +6,9 @@ import io.reactivex.schedulers.Schedulers
 import retrofit2.Retrofit
 import retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory
 import retrofit2.converter.gson.GsonConverterFactory
+import javax.inject.Inject
 
-class WeatherApi {
+class WeatherApi @Inject constructor(){
 
     val weatherApiService = Retrofit.Builder()
             .baseUrl(WEATHER_API_END_POINT)
