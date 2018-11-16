@@ -1,7 +1,7 @@
 package com.airbren.android.weather.repository
 
-import com.airbren.android.weather.api.WeatherApi
-import com.airbren.android.weather.api.WeatherResponse
+import com.airbren.android.weather.repository.api.WeatherApi
+import com.airbren.android.weather.repository.api.WeatherResponse
 import io.reactivex.Single
 
 import javax.inject.Inject

@@ -1,14 +1,12 @@
 package com.airbren.android.weather.home
 
+import android.app.Fragment
 import android.os.Bundle
-import android.support.v4.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.airbren.android.weather.R
 import com.airbren.android.weather.WeatherApplication
-import com.airbren.android.weather.api.WeatherApi
-import com.airbren.android.weather.repository.WeatherRepository
 import javax.inject.Inject
 
 
